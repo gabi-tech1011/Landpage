@@ -18,6 +18,11 @@
   animation: pulsar-sombra 1.5s ease-in-out infinite;
 }
 
+.qrcode{
+  width: 20rem;
+  margin: 3.5rem;
+}
+
 @keyframes pulsar-sombra {
   0% {
     box-shadow: 0 0 10px #ff008c;
