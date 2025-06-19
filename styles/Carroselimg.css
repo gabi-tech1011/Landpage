@@ -38,7 +38,7 @@
   border: 3px solid #ff008c;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .carousel-item:hover{
@@ -59,7 +59,7 @@
   font-size: 1.4rem;
   display: block;
   margin-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 5rem;
   background-color: #00833e;
 }
 
@@ -71,3 +71,32 @@
   transform: translateX(-13px);
 }
 
+@media (max-width: 440px) {
+.carousel-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  display: block; /* Aqui é importante! Troque flex por block */
+  padding: 1rem;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  width: max-content; /* Faz o conteúdo ultrapassar a tela */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  scroll-snap-align: start; /* "start" é melhor para mobile */
+  border: 3px solid #ff008c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  margin-bottom: 30px;
+}
+}
